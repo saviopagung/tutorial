@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "ecb4f681-31be-41d1-9fbf-155d87990e68",
+		"name": "tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inserir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"tutorial - 3as\",\n    \"description\": \"faz alguma coisa\",\n    \"situation\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/tutorials"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/tutorials"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/tutorials/1"
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"title\": \"tutorial\",\n    \"description\": \"faz alguma coisa\",\n    \"situation\": \"Normal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/tutorials"
+			},
+			"response": []
+		},
+		{
+			"name": "deletar todos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/tutorials"
+			},
+			"response": []
+		},
+		{
+			"name": "deletar por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"title\": \"tutorial - update\",\n    \"description\": \"faz alguma coisa\",\n    \"situation\": \"Normal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/tutorials/3"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por publicados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/tutorials/published"
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por titulo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials?title=tutorial - 3as",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "tutorial - 3as"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
